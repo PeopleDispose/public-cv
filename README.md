@@ -1,6 +1,6 @@
 ## Some commands reminder
 
-* `\companyexperience` - New extry in company/project/etc. worth to separate as new entry in CV.<br>
+* `\companyexperience` - New record in company/project/etc. assignment worth to separate as new entry in CV.<br>
 Usage:
 ```tex
 \companyexperience{
@@ -18,7 +18,7 @@ Usage:
 }
 ```
 
-* `\tabulardata` - Builds a formatted table with optional second row in case if argument was passed.<br>
+* `\tabulardata` - Builds a formatted table with second row exists in case if argument was passed.<br>
 Example:
 ```tex
 `tabulardata {
@@ -29,11 +29,11 @@ Example:
 }
 ```
 
-* `\itemlist` - Starts `itemize` environment aligning as the text around.
+* `\itemlist` - Starts `itemize` environment with align as the normal text around.
 
 * `\bulletitem` - New `itemize` entry with long bullet symbol.
 
-* `\formatteddaterange` - Returns a date range in two variants: date range format and 'from some point' format depending on existance of second argument.<br>
+* `\formatteddaterange` - Returns a formatted date range.<br>
 Examples:
 ```tex
 \formatteddaterange{Jan 2020}{Jan 2025} %Jan 2020 - Jan 2025
