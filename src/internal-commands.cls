@@ -11,6 +11,7 @@
 	position/.store in=\position,
 	company/.store in=\company,
 	date/.store in=\date,
+	date/.default=,
 	responsibilities/.store in=\responsibilities,
 	technologies/.default=,
 	technologies/.store in=\technologies,
@@ -20,13 +21,13 @@
 			{\equal{\company}{}}
 			{
 				\begin{tabularx}{\columnwidth}{c X c}
-					\fontsourcesanspro{\large{\textbf{\position}}}	& {} & \fontsourcesanspro{\hfill{(\date)}}
+					\fontsourcesanspro{\large{\textbf{\position}}}	& {} & \fontsourcesanspro{\hfill{\date}}
 				\end{tabularx}
 				\vspace{-10px}
 			}
 			{
 				\begin{tabularx}{\columnwidth}{c X X c}
-					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\position}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{(\date)}} \\
+					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\position}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{\date}} \\
 					\fontsourcesanspro{\large{\company}} 																				 	  & {} 	& {} & {}
 				\end{tabularx}
 			}
@@ -61,13 +62,13 @@
 			{\equal{\location}{}}
 			{
 				\begin{tabularx}{\columnwidth}{c X c}
-					\fontsourcesanspro{\large{\textbf{\header}}}	& {} & \fontsourcesanspro{\hfill{(\date)}}
+					\fontsourcesanspro{\large{\textbf{\header}}}	& {} & \fontsourcesanspro{\hfill{\date}}
 				\end{tabularx}
 				\vspace{-10px}
 			}
 			{
 				\begin{tabularx}{\columnwidth}{c X X c}
-					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\header}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{(\date)}} \\
+					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\header}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{\date}} \\
 					\fontsourcesanspro{\large{\location}} 																			  & {}	& {} & {}
 				\end{tabularx}
 			}
