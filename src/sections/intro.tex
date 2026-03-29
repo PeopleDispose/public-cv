@@ -5,12 +5,12 @@
 		/fullname/.store in=\fullname,
 		/email/.store in=\email,
 		/linkedin/.store in=\linkedin,
-		/skype/.store in=\skype
+		/github/.store in=\github
 	}
 	\pgfkeys{#1}
 	\begin{center}
 		{\fontjost{\Huge\textbf{\fullname}}}\\
-		{\fontoswald{\socialdelimiter\socialemail{\email}\socialdelimiter\socialdelimiter\sociallinkedin{\linkedin}\socialdelimiter\socialdelimiter\socialskype{\skype}\socialdelimiter}}
+		{\fontoswald{\socialdelimiter\socialemail{\email}\socialdelimiter\socialdelimiter\sociallinkedin{\linkedin}\socialdelimiter\socialdelimiter\socialgithub{\github}\socialdelimiter}}
 	\end{center}
 }
 
@@ -18,5 +18,5 @@
     fullname={Viktor Liutianskyi},
     email={born.to.run.unix@gmail.com},
     linkedin={dotfive},
-    skype={people.dispose},
+	github={PeopleDispose}
 ]

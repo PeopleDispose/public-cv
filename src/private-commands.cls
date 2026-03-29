@@ -19,6 +19,7 @@
 \newcommand{\socialemail}[1]{\faEnvelope\socialvaluedelimiter\href{mailto:#1}{#1}}
 \newcommand{\sociallinkedin}[1]{\faLinkedin\socialvaluedelimiter\href{https://www.linkedin.com/in/#1/}{#1}}
 \newcommand{\socialskype}[1]{\faSkype\socialvaluedelimiter\href{skype:#1}{#1}}
+\newcommand{\socialgithub}[1]{\faGithub\socialvaluedelimiter\href{github:#1}{#1}}
 \newcommand{\socialdelimiter}[0]{\hspace{4px}}
 \newcommand{\socialvaluedelimiter}[0]{{ }$\cdot${ }}
 

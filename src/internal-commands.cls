@@ -3,44 +3,49 @@
 
 \newcommand{\companyexperience}[1]
 {
-	\pgfkeys{/experience position,position,company,date,responsibilities,technologies,#1,print}
+	\def\experienceposition{}
+	\def\experiencecompany{}
+	\def\experiencedate{}
+	\def\experienceresponsibilities{}
+	\def\experiencetechnologies{}
+	\pgfkeys{/experience position/.cd,#1,print}
 }
 \pgfkeys
 {
 	/experience position/.is family, /experience position,
-	position/.store in=\position,
-	company/.store in=\company,
-	date/.store in=\date,
-	date/.default=,
-	responsibilities/.store in=\responsibilities,
-	technologies/.default=,
-	technologies/.store in=\technologies,
+	position/.store in=\experienceposition,
+	company/.store in=\experiencecompany,
+	date/.store in=\experiencedate,
+	responsibilities/.store in=\experienceresponsibilities,
+	technologies/.store in=\experiencetechnologies,
 	print/.code=
 	{
+		\par\noindent
+		\begin{tabularx}{\columnwidth}{@{}X r@{}}
+			{\fontsourcesanspro\large\textbf{\experienceposition}} & {\fontsourcesanspro \experiencedate} \\
+			{\fontsourcesanspro\large \experiencecompany} & {}
+		\end{tabularx}
+		\par
+		
 		\ifthenelse
-			{\equal{\company}{}}
-			{
-				\begin{tabularx}{\columnwidth}{c X c}
-					\fontsourcesanspro{\large{\textbf{\position}}}	& {} & \fontsourcesanspro{\hfill{\date}}
-				\end{tabularx}
-				\vspace{-10px}
-			}
-			{
-				\begin{tabularx}{\columnwidth}{c X X c}
-					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\position}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{\date}} \\
-					\fontsourcesanspro{\large{\company}} 																				 	  & {} 	& {} & {}
-				\end{tabularx}
-			}
-		\itemlist
+		{\not\equal{\experienceresponsibilities}{} \OR \not\equal{\experiencetechnologies}{}}
 		{
-			\bulletitemindented{\responsibilities}
-			\ifnot
-				{\equal{\technologies}{}}
-				{
-					\bulletitemindented{\emph{Key technologies}: \technologies}
-				}
+			\itemlist
+			{
+				\ifthenelse
+				{\not\equal{\experienceresponsibilities}{}}
+				{\bulletitemindented{\experienceresponsibilities}}
+				{}
+				
+				\ifthenelse
+				{\not\equal{\experiencetechnologies}{}}
+				{\bulletitemindented{\emph{Key technologies}: \experiencetechnologies}}
+				{}
+			}
 		}
-		\vspace{5px}
+		{}
+		
+		\vspace{5pt}
 	}
 }
 
