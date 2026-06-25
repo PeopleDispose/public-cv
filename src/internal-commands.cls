@@ -22,8 +22,8 @@
 	{
 		\par\noindent
 		\begin{tabularx}{\columnwidth}{@{}X r@{}}
-			{\fontsourcesanspro\large\textbf{\experienceposition}} & {\fontsourcesanspro \experiencedate} \\
-			{\fontsourcesanspro\large \experiencecompany} & {}
+			{\fontopensans\Large\textbf{\experienceposition}} & {\fontsourcesanspro \experiencedate} \\
+			{\fontopensans\Large \experiencecompany} & {}
 		\end{tabularx}
 		\par
 		
@@ -39,7 +39,7 @@
 				
 				\ifthenelse
 				{\not\equal{\experiencetechnologies}{}}
-				{\bulletitemindented{\emph{Key technologies}: \experiencetechnologies}}
+				{\vspace*{2px}\bulletitemindented{\textit{\textbf{Ключові технології:} \experiencetechnologies}}}
 				{}
 			}
 		}
@@ -67,14 +67,14 @@
 			{\equal{\location}{}}
 			{
 				\begin{tabularx}{\columnwidth}{c X c}
-					\fontsourcesanspro{\large{\textbf{\header}}}	& {} & \fontsourcesanspro{\hfill{\date}}
+					\fontopensans{\large{\textbf{\header}}}	& {} & \fontopensans{\hfill{\date}}
 				\end{tabularx}
 				\vspace{-10px}
 			}
 			{
 				\begin{tabularx}{\columnwidth}{c X X c}
-					\multicolumn{2}{l}{\fontsourcesanspro{\large{\textbf{\header}}}\vspace{4px}}		& {} & \fontsourcesanspro{\hfill{\date}} \\
-					\fontsourcesanspro{\large{\location}} 																			  & {}	& {} & {}
+					\multicolumn{2}{l}{\fontopensans{\large{\textbf{\header}}}\vspace{4px}}		& {} & \fontopensans{\hfill{\date}} \\
+					\fontopensans{\large{\location}} 																			  & {}	& {} & {}
 				\end{tabularx}
 			}
 		\description

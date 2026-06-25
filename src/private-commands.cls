@@ -13,8 +13,8 @@
 
 \newcommand{\sectionheader}[1]{\vspace*{6px}{\fontsourcesanspro{\LARGE{\textbf{#1}}}}\vspace*{-2px}}
 
-\newcommand{\listitem}[2]{\item[#1]#2}
-\newcommand{\bulletitemindented}[1]{\listitem{$\phantom{}$}#1}
+\newcommand{\listitem}[2]{\item[#1]{\fontopensans{#2}}}
+\newcommand{\bulletitemindented}[1]{\listitem{$\phantom{}$}{#1}}
 
 \newcommand{\socialemail}[1]{\faEnvelope\socialvaluedelimiter\href{mailto:#1}{#1}}
 \newcommand{\sociallinkedin}[1]{\faLinkedin\socialvaluedelimiter\href{https://www.linkedin.com/in/#1/}{#1}}
@@ -27,4 +27,6 @@
 
 \newcommand{\fontsourcesanspro}[1]{\fontspec[Path = fonts/, Extension = .ttf, BoldFont = *-SemiBold, UprightFont = *-Light, UprightFeatures = {Scale = 0.9}]{SourceSansPro}{#1}}
 \newcommand{\fontjost}[1]{\fontspec[Path = fonts/, BoldFont = *-SemiBold, Extension = .ttf]{Jost}{#1}}
+\newcommand{\fontcomfortaa}[1]{\fontspec[Path = fonts/, Extension = .ttf, BoldFont = *-Bold]{Comfortaa}{#1}}
 \newcommand{\fontoswald}[1]{\fontspec[Path = fonts/, UprightFont = *-Light, Extension = .ttf]{Oswald}{#1}}
+\newcommand{\fontopensans}[1]{\fontspec[Path = fonts/, ItalicFont = *-Italic, UprightFont = *-Light, BoldFont = *-SemiBold, Extension = .ttf]{OpenSans}{#1}}
